@@ -1,33 +1,35 @@
-package cn.st4rlight.solution.chain;
+package cn.st4rlight.solution.chain.double_pointer;
 
 import cn.st4rlight.model.ListNode;
 
 /**
  * @author st4rlight <st4rlight@163.com>
- * Created on 2023-01-01
+ * Created on 2023-04-16
  */
-public class S21 {
+public class _21 {
+
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode();
-        ListNode work = dummy;
+        ListNode last = dummy;
 
         while (list1 != null && list2 != null) {
-            if (list1.val < list2.val) {
-                work.next = list1;
+            if (list1.val <= list2.val) {
+                last.next = list1;
                 list1 = list1.next;
             } else {
-                work.next = list2;
+                last.next = list2;
                 list2 = list2.next;
             }
 
-            work = work.next;
+            last = last.next;
+            last.next = null;
         }
 
         if (list1 != null) {
-            work.next = list1;
+            last.next = list1;
         }
         if (list2 != null) {
-            work.next = list2;
+            last.next = list2;
         }
 
         return dummy.next;

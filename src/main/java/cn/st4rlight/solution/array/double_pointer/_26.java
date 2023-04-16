@@ -1,10 +1,10 @@
-package cn.st4rlight.solution.array;
+package cn.st4rlight.solution.array.double_pointer;
 
 /**
  * @author st4rlight <st4rlight@163.com>
- * Created on 2023-01-01
+ * Created on 2023-04-16
  */
-public class S26 {
+public class _26 {
 
     public int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) {

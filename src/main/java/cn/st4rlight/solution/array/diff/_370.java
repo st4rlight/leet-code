@@ -2,7 +2,7 @@ package cn.st4rlight.solution.array.diff;
 
 import java.util.Arrays;
 
-import cn.st4rlight.template.AlgoDiff;
+import cn.st4rlight.template.DiffArray;
 
 /**
  * 差分数组题
@@ -16,11 +16,11 @@ public class _370 {
         int[] nums = new int[length];
         Arrays.fill(nums, 0);
 
-        AlgoDiff algoDiff = new AlgoDiff(nums);
+        DiffArray diffArray = new DiffArray(nums);
         for (int[] update : updates) {
-            algoDiff.increment(update[0], update[1], update[2]);
+            diffArray.increment(update[0], update[1], update[2]);
         }
 
-        return algoDiff.getResult();
+        return diffArray.getResult();
     }
 }

@@ -6,7 +6,7 @@ package cn.st4rlight.template;
  * @author st4rlight <st4rlight@163.com>
  * Created on 2023-04-16
  */
-public class AlgoDiff {
+public class DiffArray {
 
     // 差分数组
     private final int[] diff;
@@ -17,7 +17,7 @@ public class AlgoDiff {
     /**
      * 原始数组转换成差分数组
      */
-    public AlgoDiff(int[] nums) {
+    public DiffArray(int[] nums) {
         if (nums == null || nums.length == 0) {
             throw new RuntimeException();
         }
